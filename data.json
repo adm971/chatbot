@@ -1,0 +1,104 @@
+{
+    "salutation": {
+        "patterns": [
+            "bonjour", "salut", "hey", "coucou", "bonsoir", "hello", "hi", "yo", "selem", "slt",
+            "bonjour, comment ça va aujourd'hui",
+            "salut, ravi de te parler",
+            "hello, comment te sens-tu ce matin",
+            "coucou, ça fait plaisir de te voir",
+            "bonsoir, comment s'est passée ta journée",
+            "hi, content de te parler",
+            "hey, comment ça va"
+        ],
+        "responses": [
+            "Bonjour ! Comment puis-je vous aider ?",
+            "Salut ! Ravi de vous parler",
+            "Hey ! Qu'est-ce que je peux faire pour vous ?"
+        ]
+    },
+    "aurevoir": {
+        "patterns": [
+            "au revoir", "bye", "à bientôt", "ciao", "adieu", "bonne journée", "salut",
+            "au revoir et bonne continuation",
+            "à bientôt, prends soin de toi",
+            "ciao, à la prochaine",
+            "bonne journée, à plus tard",
+            "bye, passe une excellente journée"
+        ],
+        "responses": [
+            "Au revoir ! Bonne journée",
+            "À bientôt !",
+            "Ciao ! N'hésitez pas à revenir."
+        ]
+    },
+    "merci": {
+        "patterns": [
+            "merci", "thanks", "thank you", "c'est gentil", "super merci",
+            "merci beaucoup pour votre aide",
+            "merci infiniment, je vous suis reconnaissant",
+            "merci, ça me fait vraiment plaisir",
+            "merci pour votre temps et votre patience"
+        ],
+        "responses": [
+            "De rien, avec plaisir !",
+            "C'est un plaisir !",
+            "Pas de souci !"
+        ]
+    },
+    "nom": {
+        "patterns": [
+            "comment tu t'appelles", "tu es qui", "quel est ton nom", "tu t'appelles comment", "qui es-tu",
+            "peux-tu me dire ton nom",
+            "je voudrais savoir comment tu t'appelles",
+            "quel est le nom de l'assistant avec qui je parle"
+        ],
+        "responses": [
+            "Je suis PyBot, votre assistant IA basé sur PyTorch !",
+            "Mon nom est PyBot. Enchanté !"
+        ]
+    },
+    "humeur": {
+        "patterns": [
+            "comment tu vas", "ça va", "comment vas-tu", "tu vas bien", "comment ça va",
+            "ça va bien pour toi aujourd'hui",
+            "comment te sens-tu en ce moment",
+            "je voudrais savoir comment tu vas",
+            "est-ce que tout va bien pour toi aujourd'hui"
+        ],
+        "responses": [
+            "Je vais très bien, merci de demander ! Et vous ?",
+            "Toujours au top ! Et de votre côté ?",
+            "Super bien ! J'adore discuter."
+        ]
+    },
+    "heure": {
+        "patterns": [
+            "quelle heure est-il", "il est quelle heure", "heure actuelle", "l'heure",
+            "peux-tu me donner l'heure exacte maintenant",
+            "sais-tu quelle heure il est",
+            "je voudrais connaître l'heure s'il te plaît"
+        ],
+        "responses": ["__heure__"]
+    },
+    "blague": {
+        "patterns": [
+            "raconte moi une blague", "blague", "fais moi rire", "une blague",
+            "peux-tu me raconter une blague drôle",
+            "j'aimerais entendre une blague amusante",
+            "fais-moi rigoler avec une blague"
+        ],
+        "responses": [
+            "Pourquoi les plongeurs plongent-ils toujours en arrière ? Parce que sinon ils tomberaient dans le bateau !",
+            "Un électron entre dans un bar. Le barman demande : 'Qu'est-ce que tu prends ?' L'électron répond : 'Rien, j'ai déjà trop de charge.' ⚡",
+            "Qu'est-ce qu'un crocodile qui surveille des meubles ? Un gardicocodile !"
+        ]
+    },
+    "inconnu": {
+        "patterns": [],
+        "responses": [
+            "Je n'ai pas bien compris. Pouvez-vous reformuler ?",
+            "Hmm, je ne suis pas sûr de comprendre. Essayez autrement ?",
+            "Je ne connais pas encore la réponse à ça"
+        ]
+    }
+}
