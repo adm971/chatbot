@@ -24,6 +24,8 @@ FONT_SMALL   = ("Consolas", 9)
 
 
 class ChatbotApp(tk.Tk):
+
+
     def __init__(self, model, vocab, intent_names, intents):
         super().__init__()
         self.model = model
@@ -31,7 +33,7 @@ class ChatbotApp(tk.Tk):
         self.intent_names = intent_names
         self.intents = intents
 
-        self.title("PyBot — Assistant IA")
+        self.title("PyBot — Chatbot")
         self.geometry("720x620")
         self.minsize(500, 450)
         self.configure(bg=BG_DARK)
@@ -41,7 +43,6 @@ class ChatbotApp(tk.Tk):
         self._welcome()
 
     # GUI
-
     def _build_ui(self):
         # header
         header = tk.Frame(self, bg=BG_PANEL, height=60)
@@ -58,7 +59,7 @@ class ChatbotApp(tk.Tk):
         ).pack(side="left")
 
         tk.Label(
-            header, text="● IA locale · PyTorch",
+            header, text="- IA locale - Chatbot - PyTorch",
             font=FONT_SMALL, fg=TEXT_MUTED, bg=BG_PANEL
         ).pack(side="left", padx=10)
 
@@ -69,6 +70,9 @@ class ChatbotApp(tk.Tk):
             command=self._clear_chat
         )
         btn_clear.pack(side="right", padx=20)
+
+
+
 
         # Chat
         chat_frame = tk.Frame(self, bg=BG_DARK)
@@ -98,6 +102,9 @@ class ChatbotApp(tk.Tk):
         self.chat_display.tag_config("bot_msg",    foreground=TEXT_MAIN,  font=FONT_MAIN)
         self.chat_display.tag_config("muted",      foreground=TEXT_MUTED, font=FONT_SMALL)
         self.chat_display.tag_config("separator",  foreground=BORDER)
+
+
+
 
         # INPUT
         input_frame = tk.Frame(self, bg=BG_INPUT, highlightthickness=1, highlightbackground=BORDER)
@@ -135,6 +142,10 @@ class ChatbotApp(tk.Tk):
         )
         send_btn.pack(side="right", padx=(0, 8), pady=6)
 
+
+
+
+
         # Status
         self.status_var = tk.StringVar(value="Prêt")
         status_bar = tk.Label(
@@ -142,6 +153,9 @@ class ChatbotApp(tk.Tk):
             font=FONT_SMALL, fg=TEXT_MUTED, bg=BG_DARK, anchor="w"
         )
         status_bar.pack(fill="x", padx=16, pady=(0, 6))
+
+
+
 
     # LOGIQUE DU CHATBOT
 
@@ -158,6 +172,8 @@ class ChatbotApp(tk.Tk):
         self._bot_message("Bonjour ! Je suis PyBot, un chatbot expérimental basé sur PyTorch. " \
         "\nFaites la commande /aide pour voir ce que je peux faire !")
 
+
+
     def _on_send(self, event=None):
         # envoyer le message de l'utilisateur
         text = self.entry.get().strip()
@@ -167,12 +183,18 @@ class ChatbotApp(tk.Tk):
         self._user_message(text)
         self.after(300, lambda: self._respond(text))
 
+
+
+
     def is_command(self,text: str) -> bool:
         text = text.strip()
         # doit commencer par /
         if not text.startswith("/"):
             return False
         return text in COMMANDS
+
+
+
 
     def _respond(self, text: str):
         # réponse du bot
@@ -191,11 +213,17 @@ class ChatbotApp(tk.Tk):
             self._bot_message(response)
             self.status_var.set(f"Intent: {intent}  |  Confiance: {confidence:.0%}")
 
+
+
+
     def _user_message(self, text: str):
         # traiter msg utilisateur
         now = datetime.now().strftime("%H:%M")
         self._append(f"\n  Vous  ", f"[{now}]\n", "user_label", "muted")
         self._append(f"  {text}\n", "", "user_msg")
+
+
+
 
     def _bot_message(self, text: str):
         # traiter msg bot
@@ -203,6 +231,9 @@ class ChatbotApp(tk.Tk):
         self._append(f"\n  PyBot  ", f"[{now}]\n", "bot_label", "muted")
         self._append(f"  {text}\n", "", "bot_msg")
         self.chat_display.see("end")
+
+
+
 
     def _append(self, part1: str, part2: str = "", tag1: str = "bot_msg", tag2: str = "muted"):
         # afficher le texte
@@ -213,6 +244,9 @@ class ChatbotApp(tk.Tk):
             self.chat_display.insert("end", part2, tag2)
         self.chat_display.config(state="disabled")
         self.chat_display.see("end")
+
+
+
 
     def _clear_chat(self):
         # nettoyer chat
