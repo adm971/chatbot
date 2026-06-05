@@ -52,9 +52,6 @@ train_data = dataset["train"]
 
 
 
-# -----------------------------CHARGER LES DONNÉES------------------------------ 
-# INTENTS = massive_to_intents(train_data)
-# INTENTS = load_massive()
 INTENTS = load_intents()
 COMMANDS = load_commands()
 PATTERNS, RESPONSES = get_patterns_and_responses(INTENTS)
