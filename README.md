@@ -8,7 +8,11 @@ Cependant ce chatbot ne connait qu'un vocabulaire restreint et ne comprend pas p
 
 # Installation 
 1.Installer Python 
+
 Ouvrir invite de commande
-2.git clone https://github.com/adm971/chatbot.git
-3.cd chatbot 
-4.python main.py
+
+2. git clone https://github.com/adm971/chatbot.git
+
+3. cd chatbot 
+
+4. python main.py
