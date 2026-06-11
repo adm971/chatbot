@@ -13,6 +13,8 @@ Ouvrir invite de commande
 
 2. git clone https://github.com/adm971/chatbot.git
 
-3. cd chatbot 
+3. pip install datasets
 
-4. python main.py
+4. cd chatbot 
+
+5. python main.py
