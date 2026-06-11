@@ -7,7 +7,7 @@ Cependant ce chatbot ne connait qu'un vocabulaire restreint et ne comprend pas p
 
 
 # Installation 
-1.Installer Python 
+1.Installer Python https://www.python.org/downloads/
 
 Ouvrir invite de commande
 
